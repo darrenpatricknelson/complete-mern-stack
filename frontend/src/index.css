@@ -1,0 +1,177 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+/* will be using css variables for the main 3 colours used on my buttons */
+:root {
+  --primary: #1aac83;
+  --warning: #f6952d;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.car-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.car-details h4,
+.emptyDBmsg {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.car-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.deleteButton {
+  position: absolute;
+  width: 80px;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  background: var(--error);
+  padding: 10px;
+  border-radius: .5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.updateButton {
+  position: absolute;
+  width: 80px;
+  top: 80px;
+  right: 30px;
+  cursor: pointer;
+  background: var(--warning);
+  padding: 10px;
+  border-radius: .5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.cancelUpdateButton {
+  position: absolute;
+  width: 130px;
+  bottom: 100px;
+  right: 30px;
+  cursor: pointer;
+  background: var(--error);
+  padding: 10px;
+  border-radius: .5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.confirmUpdateButton {
+  position: absolute;
+  width: 130px;
+
+  bottom: 40px;
+  right: 30px;
+  cursor: pointer;
+  background: var(--primary);
+  padding: 10px;
+  border-radius: .5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.oldCarsButton {
+  cursor: pointer;
+  background: var(--primary);
+  padding: 10px;
+  margin: 20px 10px;
+  border-radius: .5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.updateCar {
+  width: 80%;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+/* new car form */
+label,
+input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* the following hiding the arrows on a number input field */
+/* I have a number input field and I don't like the scrollable numbers on the side of the input field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
